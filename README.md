@@ -18,9 +18,9 @@ The primary goal was to fix survey entries (missing values, typos, unrealistic e
 * **Emergency Department**: Highest direct workload. Emergency doctors averaged **61.08 hours/week** with a **6.69 / 10** burnout rating. Emergency nurses averaged **56.56 hours/week** with **6.56 / 10** burnout.
 * **ICU Administration**: ICU Administrators recorded the highest overall burnout score at **7.25 / 10** across **56.00 hours/week**, indicating operational friction in administrative roles.
 
-# SQL Code
+## SQL Code
 
-# 1. Cleaning & Imputation Script
+### 1. Cleaning & Imputation Script
 ```sql
 USE healthcare_research_master;
 
@@ -47,6 +47,7 @@ WHERE t1.shift_hours_per_week = 0 OR t1.shift_hours_per_week IS NULL;
 -- Remove unrealistic shift entries
 DELETE FROM healthcare_survey_master 
 WHERE shift_hours_per_week > 90;
+
 SELECT 
     department,
     profession,
