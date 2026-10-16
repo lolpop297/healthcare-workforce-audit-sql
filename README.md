@@ -20,8 +20,8 @@ The primary goal was to fix survey entries (missing values, typos, unrealistic e
 
 # SQL Code
 
-1. Cleaning & Imputation Script
-```sql```
+# 1. Cleaning & Imputation Script
+```sql
 USE healthcare_research_master;
 
 -- Standardize names
@@ -47,7 +47,6 @@ WHERE t1.shift_hours_per_week = 0 OR t1.shift_hours_per_week IS NULL;
 -- Remove unrealistic shift entries
 DELETE FROM healthcare_survey_master 
 WHERE shift_hours_per_week > 90;
-
 SELECT 
     department,
     profession,
