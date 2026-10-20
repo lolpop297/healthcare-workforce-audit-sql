@@ -62,3 +62,10 @@ FROM healthcare_survey_master
 GROUP BY department, profession
 ORDER BY department, avg_burnout_score DESC;
 ```
+## Visual Audit Proof
+
+### Before Audit (Anomaly Detection)
+![Before Audit](before_audit.png)
+
+### After Audit (Clean Aggregated Output)
+![After Audit](after_audit.png)
